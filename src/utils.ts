@@ -249,7 +249,7 @@ export async function getNoteCreationPath(
   periodicConfig: PeriodicConfig
 ): Promise<string> {
   const directory = periodicConfig.folder ?? "";
-  const filenameWithExt = !filename.endsWith(".md") ? `${filename}.md` : filename;
+  const filenameWithExt = !filename.endsWith(".canvas") ? `${filename}.canvas` : filename;
 
   const path = normalizePath(join(directory, filenameWithExt));
   await ensureFolderExists(app, path);
